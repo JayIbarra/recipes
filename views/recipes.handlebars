@@ -1,0 +1,15 @@
+<section class="container">
+  <div class="row">
+    <div class="col border p-3">
+      <h2>List of Recipes</h2>
+      <ul class="list-group list-group-flush">
+          {{#each recipe as |recipe|}}
+          <li class="list-group-item">
+            <a href="{{recipe.recipe_url}}" target="_blank">{{recipe.recipe_name}}</a>
+          </li>
+          {{/each}}
+      </ul>
+    </div>
+  </div>  
+</section>
+
