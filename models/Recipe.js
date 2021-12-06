@@ -20,9 +20,12 @@ Recipe.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    instructions: {
+    recipe_url: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        isURL: true
+      }
     }
   },
   {
