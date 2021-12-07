@@ -6,7 +6,7 @@ The Breakfast App
 [![Handlebars Badge](https://img.shields.io/badge/hbs-Handlebars.JS-orange?style=for-the-badge&logo=appveyor?labelColor=black?logoColor=orange)](#)
 [![Handlebars Badge](https://img.shields.io/badge/node-Sequelize.JS-blue?style=for-the-badge&logo=appveyor?labelColor=black?logoColor=blue)](#)
 
-**Description**\ 
+**Description**
 As someone who wants to eat healthy, I want to track good recipes, add comments to the recipes, share my recipes with others, and search for recipes to add to my site.
 
 **Table of Content**
@@ -16,7 +16,7 @@ As someone who wants to eat healthy, I want to track good recipes, add comments 
 * [License](#license)
 * [Questions](#questions)
 
-**Acceptance Criteria**\
+**Acceptance Criteria**
 * Use Node.js and Express.js to create a RESTful API.
 * Use Handlebars.js as the templating engine.
 * npm install express-handlebars
@@ -51,7 +51,7 @@ https://www.npmjs.com/package/express-session
 	
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-**Technology**\
+**Technology**
 Download npm packages and install the following dependencies:
 * Express
 * Express-Sessions
@@ -65,7 +65,7 @@ You can also monitor the changes in the code in real time by installing nodemon 
 **Usage**
 
 
-**License**\
+**License**
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Questions**\
+**Questions**
