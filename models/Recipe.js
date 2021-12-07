@@ -24,9 +24,15 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+<<<<<<< HEAD
         isURL: true,
       },
     },
+=======
+        isURL: true
+      }
+    }
+>>>>>>> 89680b04e6a4e5d8b5addbf30e926eee60a5a321
   },
   {
     sequelize,

@@ -1,5 +1,6 @@
 async function signupFormHandler(event) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     event.preventDefault();
 
     const email = document.querySelector('#email-signup').value.trim();
@@ -26,6 +27,8 @@ async function signupFormHandler(event) {
     
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 =======
+=======
+>>>>>>> 89680b04e6a4e5d8b5addbf30e926eee60a5a321
   event.preventDefault();
 
   const username = document.querySelector('#username-signup').value.trim();
@@ -53,5 +56,9 @@ async function signupFormHandler(event) {
   }
 }
 
+<<<<<<< HEAD
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+>>>>>>> 89680b04e6a4e5d8b5addbf30e926eee60a5a321
+=======
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 >>>>>>> 89680b04e6a4e5d8b5addbf30e926eee60a5a321
