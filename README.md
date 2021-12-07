@@ -6,7 +6,7 @@ The Breakfast App
 [![Handlebars Badge](https://img.shields.io/badge/hbs-Handlebars.JS-orange?style=for-the-badge&logo=appveyor?labelColor=black?logoColor=orange)](#)
 [![Handlebars Badge](https://img.shields.io/badge/node-Sequelize.JS-blue?style=for-the-badge&logo=appveyor?labelColor=black?logoColor=blue)](#)
 
-**Description**
+**Description** 
 As someone who wants to eat healthy, I want to track good recipes, add comments to the recipes, share my recipes with others, and search for recipes to add to my site.
 
 **Table of Content**
