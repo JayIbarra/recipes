@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SS_SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -36,7 +36,7 @@ app.set('view engine', 'handlebars');
 
 // Passport authentication using google strategy
 app.get('/', (req, res) => {
-  res.send('<a href="/auth/google">Authenticate with Google</a>');
+  res.send('<a href="/auth/google">Sign in with Google</a>');
 });
 
 // Authenticate user's google credentials
@@ -48,18 +48,9 @@ app.get('/auth/google',
 app.get( '/auth/google/callback',
   passport.authenticate( 'google', {
     successRedirect: '/protected',
-    failureRedirect: '/auth/google/failure'
+    failureRedirect: '/'
   })
 );
-
-function isLoggedIn(req, res, next) {
-  req.user ? next() : res.sendStatus(401);
-}
-
-app.get('/protected', isLoggedIn, (req, res) => {
-  res.send(`Hello ${req.user.displayName}`);
-});
-
 
 // turn on routes
 app.use(router);

@@ -1,43 +1,83 @@
-<header style="background-image: url('../public/assets/images/breakfast-pic.jpg');" class="py-3 mb-3">
-      <div class="flex-row justify-space-between align-center container-fluid mx-auto">
-        <h1 class="text-dark bg-transparent p-3">The Breakfast App</h1>
-        <h3 class="text-dark bg-transparent p-3"></h3>
-      </div>
-    </header>
-    <main>
-      <!-- Slection of Recipes -->
-      <section class="container">
-        <div class="row gx-5">
-          <div class="my-3 col">
-            <!-- Form -->
-            <form id="selection-form" class="p-3 border">
-              <h2>Select Recipe Difficult</h2>
-              <div class="p-3">
-                <div class="my-3">
-                  <input class="form-check-input diff" type="radio" name="difficult" id="difficult-input" value="1">
-                  <label class="form-check-label">
-                    Junior-Chef (1-3 Ingredients)
-                  </label>
-                </div>
-                <div class="my-3">
-                  <input class="form-check-input diff" type="radio" name="difficult" id="difficult-input" value="2">
-                  <label class="form-check-label">
-                    Sous-Chef (4-7 Ingredients)
-                  </label>
-                </div>
-                <div class="my-3">
-                  <input class="form-check-input diff" type="radio" name="difficult" id="difficult-input" value="3">
-                  <label class="form-check-label">
-                    Master-Chef (8-10 Ingredients)
-                  </label>
-                </div>
-              </div>
-              <!-- Search Buttom -->
-              <div id="search-button" class="d-grid gap-2">
-                <button class="btn btn-primary bg-gradient" type="button">Search</button>
-              </div>
-            </form>
+<main>
+  <!-- Slection of Recipes -->
+  <section class="container">
+    <div class="row gx-5">
+      <div class="my-3 col">
+        <!-- Form -->
+        <form id="selection-form" class="p-3 border">
+          <h2>Select Your Next Recipe</h2>
+          <div class="p-3">
+            <h5>Select Recipe Difficulty</h5>
+            <div class="my-3">
+              <input class="form-check-input diff" type="radio" name="difficult" value="1">
+              <label class="form-check-label">
+                Junior-Chef
+              </label>
+            </div>
+            <div class="my-3">
+              <input class="form-check-input diff" type="radio" name="difficult"  value="2">
+              <label class="form-check-label">
+                Sous-Chef
+              </label>
+            </div>
+            <div class="my-3">
+              <input class="form-check-input diff" type="radio" name="difficult" value="3">
+              <label class="form-check-label">
+                Master-Chef
+              </label>
+            </div>
           </div>
+          <!-- Search Buttom -->
+          <div id="search-button" class="d-grid gap-2">
+            <button id="btn-search" class="btn btn-primary bg-gradient" type="button">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add new recipe -->
+  {{#if loggedIn}}
+  <div class="my-5 container">
+    <div class="row">
+      <div class="col-6">
+        <!-- Add New Recipe Form-->
+        <div class="p-3 border bg-info bg-opacity-25">
+          <h2>Add New Recipe</h2>
+          <form id="new-recipe-form">
+            <!-- Recipe name -->
+            <div class="mb-3">
+              <label for="recipe-name" class="form-label">Recipe Name</label>
+              <input type="name" class="form-control" id="recipe-name" name="recipe-name">
+            </div>
+            <!-- Select difficult -->
+            <div class="mb-3">
+              <select class="form-select">
+                <option disabled selected>Select Recipe Difficulty</option>
+                <option value="1">Junior-Chef</option>
+                <option value="2">Sous-Chef</option>
+                <option value="3">Master-Chef</option>
+              </select>
+            </div>
+            <!-- Recipe url -->
+            <div class="mb-3">
+              <label for="recipe-url" class="form-label">Recipe URL</label>
+              <input type="name" class="form-control" id="recipe-url" name="recipe-url">
+            </div>
+            <!-- Add  recipe button -->
+            <div class="d-grid gap-2">
+              <button id="btn-add" type="submit" class="btn btn-primary">Add Recipe</button>
+            </div>
+          </form>
         </div>
-      </section>
-     <script src="/javascript/search.js"></script>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+
+</main>
+  <script src="/javascript/search.js"></script>
+  {{#if loggedIn}}
+  <script src="/javascript/addRecipe.js"></script>
+  {{/if}}
+ 
